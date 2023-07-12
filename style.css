@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root{
+    --color1: #ffffffbf;
+    --color2: #f2f2f2;
+    --color3: #e38826;
+    --color4: #006970;
+    --color5: #004241;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--color2);
+}
+
+main{
+    display: grid;
+    color: white;
+    max-width: fit-content;
+    margin: auto;
+    margin-top: 10%;
+    grid-template-areas: 
+    'sedans suvs luxury';
+    font-size: 1em;
+}
+
+main > div{
+    width: 320px;
+    height: 500px;
+    margin: auto;
+}
+
+h1{
+    margin: 30px 0px;
+    font-size: 2.7em;
+    font-family: Big Shoulders Display, Helvetica, sans-serif;
+}
+
+p{
+    color: var(--color1);
+    font-family: Lexend Deca, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-bottom: 80px;
+    line-height: 2em;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    background-color: white;
+    color: rgba(255, 255, 255, 0);
+    padding: 15px 30px;
+    border-radius: 25px;
+}
+
+a:hover{
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.container{
+    padding: 40px;
+}
+
+#sedans-box{
+    background-color: var(--color3);
+    grid-area: 'sedans';
+    border-radius: 10px 0px 0px 10px;
+}
+
+#sedans-box a{
+    color: var(--color3);
+}
+
+#sedans-box a:hover{
+    color: white;
+}
+
+#suvs-box{
+    background-color: var(--color4);
+    grid-area: 'suvs';
+}
+
+#suvs-box a{
+    color: var(--color4);
+}
+
+#suvs-box a:hover{
+    color: white;
+}
+
+#luxury-box{
+    background-color: var(--color5);
+    grid-area: luxury;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#luxury-box a{
+    color: var(--color5);
+}
+
+#luxury-box a:hover{
+    color: white;
+}
+
+@media screen and (max-width:1100px){
+    main{
+        grid-template-areas: 
+        'sedans'
+        'suvs'
+        'luxury'
+        ;
+    }
+
+    #sedans-box{
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    #luxury-box{
+        border-radius: 0px 0px 10px 10px;
+    }
+
+}
